@@ -1,12 +1,12 @@
 {
-  "name": "pie-chart",
+  "name": "cd-pie-chart",
   "version": "1.0.0",
-  "homepage": "https://github.com/n3-charts/pie-chart",
+  "homepage": "https://github.com/cemtopkaya/cd-pie-chart",
   "licenses": {
     "type": "MIT",
-    "url": "https://github.com/n3-charts/pie-chart/blob/master/LICENCE"
+    "url": "https://github.com/cemtopkaya/cd-pie-chart/blob/master/LICENCE"
   },
-  "bugs": "https://github.com/n3-charts/pie-chart/issues",
+  "bugs": "https://github.com/cemtopkaya/cd-pie-chart/issues",
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-concat": "~0.3.0",
