@@ -1,3 +1,5 @@
+Legend'lar üstüne click özelliği ekleniyor.
+
 # n3-charts.pie-chart [![Build Status](https://drone.io/github.com/n3-charts/pie-chart/status.png)](https://drone.io/github.com/n3-charts/pie-chart/latest)
 
 Yummy pies and donuts for [AngularJS](http://angularjs.org/) applications. Built on top of the wonderful [D3.js](http://d3js.org/) library.
