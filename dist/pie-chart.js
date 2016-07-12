@@ -219,6 +219,11 @@ updateRegularLegend: function(svg, data, dimensions, options) {
       .classed("legend-item", true)
       .on("mouseover", this.onMouseOver(svg))
       .on("mouseout", this.onMouseOut(svg))
+      .on("click", function(d){
+          if(typeof d.click == "function"){
+              d.click();
+          }
+      })
 
   items
     .text(this.getLegendLabelFunction(availableWidth))
