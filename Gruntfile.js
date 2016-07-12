@@ -103,4 +103,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('fast-build', ['concat', 'uglify']);
   grunt.registerTask('coverage', ['concat', 'karma:unit']);
+  grunt.registerTask('minify', ['uglify']);
 };

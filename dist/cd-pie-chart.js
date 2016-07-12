@@ -33,7 +33,7 @@ angular.module('n3-pie-utils', [])
                     .selectAll('.arc')
                     .data(tools.pie(data), function (d) {
                         return d.data.label;
-                    })
+                    });
 
                 paths.enter()
                     .append("path")
@@ -112,7 +112,7 @@ angular.module('n3-pie-utils', [])
                 var scale = d3.scale.linear()
                     .range([-legendHalfHeight, legendHalfHeight])
                     .domain([0, data.length - 1])
-                    .nice()
+                    .nice();
 
 
                 var items = svg.selectAll("#n3-pie-legend")
@@ -127,10 +127,10 @@ angular.module('n3-pie-utils', [])
                     .on("mouseover", this.onMouseOver(svg))
                     .on("mouseout", this.onMouseOut(svg))
                     .on("click", function (d) {
-                        if (typeof d.click == "function") {
-                            d.click(d);git
+                        if (typeof  d.click == "function") {
+                            d.click(d);
                         }
-                    })
+                    });
 
                 items
                     .text(this.getLegendLabelFunction(availableWidth))
@@ -228,7 +228,7 @@ angular.module('n3-pie-utils', [])
                     }
 
                     return that.getLegendLabel(datum.label, datum.value, 20);
-                }
+                };
             },
 
             onMouseOver: function (svg) {
@@ -239,7 +239,7 @@ angular.module('n3-pie-utils', [])
                                 return i === index ? "1" : "0.4";
                             }
                         });
-                    }
+                    };
 
                     dimOrHighlight(svg.selectAll(".legend-item"));
                     dimOrHighlight(svg.selectAll(".arc"));
@@ -252,7 +252,7 @@ angular.module('n3-pie-utils', [])
                         return element.transition().duration(50).style({
                             "opacity": 1
                         });
-                    }
+                    };
 
                     show(svg.selectAll(".legend-item"));
                     show(svg.selectAll(".arc"));
@@ -334,8 +334,8 @@ angular.module('n3-pie-utils', [])
                     .attr('height', height)
                     .append('g')
                     .attr('transform', 'translate(' +
-                        (dimensions.width * .5) + ',' +
-                        (dimensions.height * .5) + ')'
+                        (dimensions.width * 0.5) + ',' +
+                        (dimensions.height * 0.5) + ')'
                     );
 
                 return svg;
@@ -346,7 +346,7 @@ angular.module('n3-pie-utils', [])
                 return Math.min(
                         (d.width - d.left - d.right),
                         (d.height - d.top - d.bottom)
-                    ) * .5;
+                    ) * 0.5;
             },
 
             looksLikeSameSeries: function (newData, oldData) {
@@ -391,4 +391,4 @@ angular.module('n3-pie-utils', [])
             }
 
         };
-    }])
+    }]);
