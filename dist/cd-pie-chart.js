@@ -127,7 +127,7 @@ angular.module('n3-pie-utils', [])
                     .on("mouseover", this.onMouseOver(svg))
                     .on("mouseout", this.onMouseOut(svg))
                     .on("click", function (d) {
-                        if (typeof  d.click == "function") {
+                        if (d && typeof  d.click === "function") {
                             d.click(d);
                         }
                     });
